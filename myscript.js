@@ -23,32 +23,40 @@ start.addEventListener("click", function(){
       sotto forma di un div utilizzando un ciclo for*/
     if(choose == "easy"){
         numBoxes = 10 * 10;
-        for(i=1; i<=numBoxes; i++){
-            document.getElementById("dm_grid").innerHTML += "<div class='dm_box'>" + i + "</div>"
+        for(let i=1; i<=numBoxes; i++){
+            document.getElementById("dm_grid").innerHTML += "<div id='dm_color' class='dm_box'>" + i + "</div>"
             grid.classList.add("dm_big_box_easy");
             
+            //al click solo la casella numero 1 diventa azzurra, le altre no
+            let color = document.getElementById("dm_color");
+            
+            color.addEventListener("click", function(){
+                color.classList.add("dm_bg_color");
+            })
         }
         
     }else if(choose == "medium"){
         numBoxes = 9 * 9;
-        for(i=1; i<=numBoxes; i++){
+        for(let i=1; i<=numBoxes; i++){
             document.getElementById("dm_grid").innerHTML += "<div class='dm_box'>" + i + "</div>"
             grid.classList.add("dm_big_box_medium");
         }
     }
     else{
         numBoxes = 7 * 7;
-        for(i=1; i<=numBoxes; i++){
+        for(let i=1; i<=numBoxes; i++){
             document.getElementById("dm_grid").innerHTML += "<div class='dm_box'>" + i + "</div>"
             grid.classList.add("dm_big_box_hard");
+            
         }
     }
     console.log(numBoxes);
-
+    
+    
     
 });
 
-let color = document.getElementById("")
+
 
 
 
