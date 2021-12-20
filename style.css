@@ -1,0 +1,11 @@
+.dm_difficulty{
+    width: 18%;
+}
+
+.dm_my_btn, .dm_selection{
+    padding: 0px 10px;
+}
+
+.dm_selection{
+    height: 28px;
+}
