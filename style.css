@@ -1,5 +1,5 @@
 .dm_difficulty{
-    width: 18%;
+    width: 25%;
 }
 
 .dm_my_btn, .dm_selection{
@@ -8,4 +8,35 @@
 
 .dm_selection{
     height: 28px;
+}
+
+.dm_big_box_easy{
+    width: 71%;
+}
+
+.dm_big_box_medium{
+    width: 64%;
+}
+
+.dm_big_box_hard{
+    width: 50%;
+}
+
+.dm_box{
+    text-align: center;
+    line-height: 80px;
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    transition: 1s;
+    border: 1px solid #000;
+}
+
+.dm_foot{
+    line-height: 50px;
+    height: 50px;
+}
+
+.dm_bg_color{
+    background-color: aqua;
 }
