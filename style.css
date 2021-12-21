@@ -2,6 +2,7 @@
 body{
     background-color: black;
     color: #fff;
+    height: 100vh;
 }
 
 .dm_difficulty{
@@ -39,8 +40,8 @@ body{
 }
 
 .dm_foot{
-    line-height: 50px;
-    height: 50px;
+    line-height: 30px;
+    height: 30px;
 }
 
 .dm_bg_color{
