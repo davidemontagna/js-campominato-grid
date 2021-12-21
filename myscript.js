@@ -34,11 +34,11 @@ start.addEventListener("click", function(){
 
         for(let i=0; i<color.length; i++){
             color[i].addEventListener("click", function(){
-            color[i].classList.add("dm_bg_color");
-        })
+            this.classList.add("dm_bg_color");
+            });
         }
 
-        }else if(choose == "medium"){
+    }else if(choose == "medium"){
         numBoxes = 9 * 9;
         for(let i=1; i<=numBoxes; i++){
             document.getElementById("dm_grid").innerHTML += "<div class='dm_box'>" + i + "</div>"
@@ -49,10 +49,11 @@ start.addEventListener("click", function(){
         let color = document.getElementsByClassName("dm_box");
         for(let i=0; i<color.length; i++){
             color[i].addEventListener("click", function(){
-            color[i].classList.add("dm_bg_color");
-        })}
-    }
-    else{
+            this.classList.add("dm_bg_color");
+            });
+        }
+
+    }else{
         numBoxes = 7 * 7;
         for(let i=1; i<=numBoxes; i++){
             document.getElementById("dm_grid").innerHTML += "<div class='dm_box'>" + i + "</div>"
@@ -64,23 +65,15 @@ start.addEventListener("click", function(){
         let color = document.getElementsByClassName("dm_box");
         for(let i=0; i<color.length; i++){
             color[i].addEventListener("click", function(){
-            color[i].classList.add("dm_bg_color");
-        })}
+            this.classList.add("dm_bg_color");
+            });
+        }
     }
     console.log(numBoxes);
     
     
     
 });
-
-//al click solo la casella numero 1 diventa azzurra, le altre no
-
-//color.addEventListener("click", function(){
-   // color.classList.add("dm_bg_color");
-//})
-
-
-
 
 
 //bottone per resettare e creare una nuova griglia
