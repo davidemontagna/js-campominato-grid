@@ -16,7 +16,7 @@ const start = document.getElementById("dm_start");
 start.addEventListener("click", function(){
     //prendo il valore inserito dall'utente
     const choose = document.getElementById("mySelect").value;
-
+    grid.innerHTML = ""; //elimino la griglia per poterne creare una nuova senza aggiungerla alla precedente
     let numBoxes = 0;
 
     /*a seconda del valore inserito genero un tot di caselle e le inserisco
@@ -25,8 +25,10 @@ start.addEventListener("click", function(){
         numBoxes = 10 * 10;
         //creo un ciclo per aggiungere le caselle
         for(let i=1; i<=numBoxes; i++){
-            document.getElementById("dm_grid").innerHTML += "<div class='dm_box'>" + i + "</div>"
-            grid.classList.add("dm_big_box_easy");
+            document.getElementById("dm_grid").innerHTML += `<div class='dm_box'>${i}</div>`;
+            grid.classList.add("dm_big_box_easy");  //aggiungo la dimensione alla griglia scelta
+            grid.classList.remove("dm_big_box_medium"); //tolgo la dimensione della griglia precedente
+            grid.classList.remove("dm_big_box_hard");
         }
 
         //al click aggiungo la classe per far diventare il bg della casella azzurro
@@ -41,8 +43,10 @@ start.addEventListener("click", function(){
     }else if(choose == "medium"){
         numBoxes = 9 * 9;
         for(let i=1; i<=numBoxes; i++){
-            document.getElementById("dm_grid").innerHTML += "<div class='dm_box'>" + i + "</div>"
+            document.getElementById("dm_grid").innerHTML += `<div class='dm_box'>${i}</div>`;
             grid.classList.add("dm_big_box_medium");
+            grid.classList.remove("dm_big_box_easy");
+            grid.classList.remove("dm_big_box_hard");
         }
 
         //al click aggiungo la classe per far diventare il bg della casella azzurro
@@ -56,7 +60,7 @@ start.addEventListener("click", function(){
     }else{
         numBoxes = 7 * 7;
         for(let i=1; i<=numBoxes; i++){
-            document.getElementById("dm_grid").innerHTML += "<div class='dm_box'>" + i + "</div>"
+            document.getElementById("dm_grid").innerHTML += `<div class='dm_box'>${i}</div>`;
             grid.classList.add("dm_big_box_hard");
             
         }
@@ -71,16 +75,14 @@ start.addEventListener("click", function(){
     }
     console.log(numBoxes);
     
-    
-    
 });
 
 
-//bottone per resettare e creare una nuova griglia
+/*bottone per refreshare la pagina e creare una nuova griglia
 const reset = document.getElementById("reset");
 
 reset.addEventListener("click", function(){
     window.location.reload();
-});
+});*/
 
 
