@@ -23,24 +23,34 @@ start.addEventListener("click", function(){
       sotto forma di un div utilizzando un ciclo for*/
     if(choose == "easy"){
         numBoxes = 10 * 10;
+        //creo un ciclo per aggiungere le caselle
         for(let i=1; i<=numBoxes; i++){
-            document.getElementById("dm_grid").innerHTML += "<div id='dm_color' class='dm_box'>" + i + "</div>"
+            document.getElementById("dm_grid").innerHTML += "<div class='dm_box'>" + i + "</div>"
             grid.classList.add("dm_big_box_easy");
-            
-            //al click solo la casella numero 1 diventa azzurra, le altre no
-            let color = document.getElementById("dm_color");
-            
-            color.addEventListener("click", function(){
-                color.classList.add("dm_bg_color");
-            })
         }
-        
-    }else if(choose == "medium"){
+
+        //al click aggiungo la classe per far diventare il bg della casella azzurro
+        let color = document.getElementsByClassName("dm_box");
+
+        for(let i=0; i<color.length; i++){
+            color[i].addEventListener("click", function(){
+            color[i].classList.add("dm_bg_color");
+        })
+        }
+
+        }else if(choose == "medium"){
         numBoxes = 9 * 9;
         for(let i=1; i<=numBoxes; i++){
             document.getElementById("dm_grid").innerHTML += "<div class='dm_box'>" + i + "</div>"
             grid.classList.add("dm_big_box_medium");
         }
+
+        //al click aggiungo la classe per far diventare il bg della casella azzurro
+        let color = document.getElementsByClassName("dm_box");
+        for(let i=0; i<color.length; i++){
+            color[i].addEventListener("click", function(){
+            color[i].classList.add("dm_bg_color");
+        })}
     }
     else{
         numBoxes = 7 * 7;
@@ -49,12 +59,25 @@ start.addEventListener("click", function(){
             grid.classList.add("dm_big_box_hard");
             
         }
+
+        //al click aggiungo la classe per far diventare il bg della casella azzurro
+        let color = document.getElementsByClassName("dm_box");
+        for(let i=0; i<color.length; i++){
+            color[i].addEventListener("click", function(){
+            color[i].classList.add("dm_bg_color");
+        })}
     }
     console.log(numBoxes);
     
     
     
 });
+
+//al click solo la casella numero 1 diventa azzurra, le altre no
+
+//color.addEventListener("click", function(){
+   // color.classList.add("dm_bg_color");
+//})
 
 
 

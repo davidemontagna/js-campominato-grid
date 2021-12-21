@@ -1,3 +1,9 @@
+
+body{
+    background-color: black;
+    color: #fff;
+}
+
 .dm_difficulty{
     width: 25%;
 }
@@ -28,7 +34,8 @@
     height: 80px;
     width: 80px;
     display: inline-block;
-    border: 1px solid #000;
+    border: 1px solid #fff;
+    transition: 0.3s;
 }
 
 .dm_foot{
@@ -37,5 +44,5 @@
 }
 
 .dm_bg_color{
-    background-color: aqua;
+    background-color: cornflowerblue;
 }
